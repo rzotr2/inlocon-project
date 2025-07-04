@@ -17,20 +17,29 @@ const questions = [
     },
     {
         question: "Wie erhalte ich Benachrichtigungen?",
-        answer: "Sie erhalten automatische Benachrichtigungen per E-Mail oder direkt im Dashboard, sobald neue passende Projekte verfügbar sind.",
+        answer: "Sie erhalten Benachrichtigungen per E-Mail oder direkt im Dashboard, sobald neue passende Projekte verfügbar sind.",
     },
 ];
 
 export const QuestionsSection: FC<HTMLAttributes<HTMLElement>> = () => {
     const [questionsRef, questionsVisible] = useFadeInOnScroll<HTMLDivElement>();
-    const [openIdx, setOpenIdx] = useState<number | null>(null);
+    const [openIdx, setOpenIdx] = useState<number | null>(0);
 
-    const handleClick = (idx: number) => {
-        setOpenIdx(openIdx === idx ? null : idx);
+    const handleClick = (index: number) => {
+        if (openIdx === null) {
+            setOpenIdx(index);
+        } else if (openIdx === index) {
+            setOpenIdx(null);
+        } else {
+            setOpenIdx(null);
+            setTimeout(() => {
+                setOpenIdx(index);
+            }, 300);
+        }
     };
 
     return (
-        <section className="py-7 sm:py-10 md:py-12">
+        <section className="pt-7 sm:pt-10 md:pt-12">
             <div
                 className={`${refClass} ${questionsVisible ? visibleClass : nonVisibleClass}`}
                 ref={questionsRef}
@@ -40,6 +49,7 @@ export const QuestionsSection: FC<HTMLAttributes<HTMLElement>> = () => {
                         src={officeImage}
                         alt="Office"
                         className="w-full h-auto object-cover"
+                        aria-hidden
                     />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-0 items-stretch py-5 xl:p-5">
@@ -48,60 +58,57 @@ export const QuestionsSection: FC<HTMLAttributes<HTMLElement>> = () => {
                             center={false}
                             dark={true}
                             title="Wie kann ich starten?"
-                            subtitle="Erfahren Sie, wie Sie schnell und einfach mit unserer Plattform loslegen können. Hier finden Sie die wichtigsten Schritte für Ihren Einstieg."
+                            subtitle="Erfahren Sie, wie Sie schnell und einfach mit unserer Plattform loslegen können.
+                        Hier finden Sie die wichtigsten Schritte für Ihren Einstieg."
                         />
                     </div>
                     <div>
-                        <ul className="flex flex-col w-full gap-3">
-                            {questions.map((q, idx) => (
-                                <li
-                                    key={q.question}
-                                    className="flex flex-col gap-2 "
-                                >
-                                    <button
-                                        className="flex justify-between gap-3 cursor-pointer w-full items-center"
-                                        onClick={() => handleClick(idx)}
-                                        aria-expanded={openIdx === idx}
-                                        aria-controls={`faq-panel-${idx}`}
+                        <ul className="flex flex-col w-full gap-3 min-h-[280px]">
+                            {questions.map((question, index) => {
+                                const isOpen = openIdx === index;
+                                return (
+                                    <li
+                                        key={question.question}
+                                        className="flex flex-col gap-2"
                                     >
-                                        <p className="text-accent opacity-80 text-[1rem] sm:text-[1.1rem] md:text-[1.15rem] lg:text-[1.2rem] leading-snug self-center text-start">
-                                            {q.question}
-                                        </p>
-                                        <div
-                                            className="w-7 h-7 md:w-8 md:h-8 bg-accent rounded-full flex items-center justify-center flex-none transition-transform duration-300"
-                                            style={{
-                                                transform:
-                                                    openIdx === idx
-                                                        ? "rotate(180deg)"
-                                                        : "rotate(0deg)",
-                                            }}
+                                        <button
+                                            className="flex justify-between gap-3 cursor-pointer w-full items-center"
+                                            onClick={() => handleClick(index)}
+                                            aria-expanded={isOpen}
+                                            aria-controls={`fQuestion №${index}`}
                                         >
-                                            <IoChevronDownOutline className="text-primary w-5 h-5 md:w-6 md:h-6 block" />
+                                            <p
+                                                className="text-accent text-[1rem] sm:text-[1.1rem] font-medium
+                                                    md:text-[1.15rem] lg:text-[1.2rem] leading-snug self-center text-start"
+                                            >
+                                                {question.question}
+                                            </p>
+                                            <div
+                                                className={`w-7 h-7 md:w-8 md:h-8 bg-accent rounded-full flex items-center 
+                                                    justify-center flex-none transition-transform duration-300 
+                                                    ${isOpen ? "rotate-180" : ""}`}
+                                            >
+                                                <IoChevronDownOutline className="text-primary w-5 h-5 md:w-6 md:h-6 block" />
+                                            </div>
+                                        </button>
+                                        <div
+                                            id={`Question №${index}`}
+                                            className={`transition-[max-height] duration-300 overflow-hidden
+                                                ${isOpen ? "max-h-[300px] mt-2" : "max-h-0"}`}
+                                            aria-hidden={!isOpen}
+                                        >
+                                            <div className="text-accent/80 text-[0.98rem] sm:text-[1.05rem] px-1 pb-2 opacity-80">
+                                                {question.answer}
+                                            </div>
                                         </div>
-                                    </button>
-                                    <div
-                                        id={`faq-panel-${idx}`}
-                                        className={`
-                                            transition-[max-height] duration-500 overflow-hidden
-                                            ${openIdx === idx ? "max-h-[300px] mt-2" : "max-h-0"}
-                                        `}
-                                        aria-hidden={openIdx !== idx}
-                                    >
-                                        <div className="text-accent/80 text-[0.98rem] sm:text-[1.05rem] px-1 pb-2">
-                                            {q.answer}
-                                        </div>
-                                    </div>
-                                    <Separator
-                                        role="separator"
-                                        className="h-[1px] bg-gray-300"
-                                    />
-                                </li>
-                            ))}
+                                        <Separator
+                                            role="separator"
+                                            className="h-[1px] bg-gray-300"
+                                        />
+                                    </li>
+                                );
+                            })}
                         </ul>
-                        <div
-                            aria-hidden="true"
-                            className={`transition-[height] duration-500 pointer-events-none select-none ${openIdx !== null ? "h-0" : "h-[84px]"}`}
-                        />
                     </div>
                 </div>
             </div>

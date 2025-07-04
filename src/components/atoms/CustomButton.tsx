@@ -7,7 +7,7 @@ const button = cva("cursor-pointer", {
         intent: {
             primary: ["bg-accent", "text-primary"],
             secondary: ["bg-secondary", "text-accent"],
-            outline: ["bg-primary", "text-accent", "border-accent", "border-1"],
+            outline: ["text-primary", "border-primary", "border-1"],
         },
         size: {
             sm: ["text-sm", "py-2", "px-5"],
@@ -31,7 +31,7 @@ const button = cva("cursor-pointer", {
         },
         {
             intent: "outline",
-            class: "hover:bg-primary-hover",
+            class: "hover:bg-primary-hover hover:text-accent",
         },
     ],
 });

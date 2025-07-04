@@ -10,24 +10,30 @@ import { TransparencyFeatures } from "../organisms/TransparencyFeatures.tsx";
 import { Header } from "../organisms/Header.tsx";
 import { Menu } from "../organisms/Menu.tsx";
 import { EmailSection } from "../organisms/EmailSection.tsx";
+import { Footer } from "../organisms/Footer.tsx";
 
 export const visibleClass = "opacity-100 translate-y-0";
 export const nonVisibleClass = "opacity-0 translate-y-12 pointer-events-none";
 export const refClass = "transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)]";
 
 export const LandingPage: FC = () => {
-    const [transparent, setTransparent] = useState<boolean>(true);
-    const [menuOpened, setMenuOpened] = useState<boolean>(false);
+    const [menuOpened, setMenuOpened] = useState(false);
     const heroRef = useRef<HTMLDivElement | null>(null);
+    const [transparent, setTransparent] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (!heroRef.current) return;
+            if (!heroRef.current) {
+                setTransparent(true);
+                return;
+            }
             const rect = heroRef.current.getBoundingClientRect();
-            const heroMiddle = rect.top + rect.height / 4;
-            setTransparent(heroMiddle > 0);
+            const heroQuarter = rect.top + rect.height / 4;
+            setTransparent(heroQuarter > 0);
         };
+
         setTimeout(handleScroll, 0);
+
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -43,9 +49,7 @@ export const LandingPage: FC = () => {
         };
     }, [menuOpened]);
 
-    const openMenu = () => {
-        setMenuOpened(!menuOpened);
-    };
+    const openMenu = () => setMenuOpened(!menuOpened);
 
     return (
         <main>
@@ -59,6 +63,7 @@ export const LandingPage: FC = () => {
                     openMenu={openMenu}
                 />
             </div>
+            {<Menu menuOpened={menuOpened} />}
             <div ref={heroRef}>
                 <HeroSection />
             </div>
@@ -78,9 +83,13 @@ export const LandingPage: FC = () => {
             <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px]">
                 <PartnersSection />
                 <QuestionsSection />
+            </div>
+            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] mb-20">
                 <EmailSection />
             </div>
-            {<Menu menuOpened={menuOpened} />}
+            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] bg-accent">
+                <Footer />
+            </div>
         </main>
     );
 };

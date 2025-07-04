@@ -71,7 +71,7 @@ export const PartnersSection: FC<HTMLAttributes<HTMLElement>> = () => {
                                 src={logo}
                                 alt={`${name} logo`}
                                 className="w-full h-auto filter grayscale group-hover:grayscale-0
-                                transition-all duration-300 object-contain"
+                                    transition-all duration-300 object-contain"
                                 draggable={false}
                             />
                         </a>

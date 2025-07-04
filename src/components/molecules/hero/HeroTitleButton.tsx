@@ -1,15 +1,8 @@
 import type { FC, HTMLAttributes } from "react";
 import { CustomButton } from "../../atoms/CustomButton.tsx";
-import { useScreenWidth } from "../../../utils/screenWidthHook.ts";
+import { useBreakpoint } from "../../../utils/breakPointHook.ts";
 
 export const HeroTitleButton: FC<HTMLAttributes<HTMLElement>> = () => {
-    const screenWidth = useScreenWidth();
-
-    let size: "sm" | "md" | "lg" | "xl" = "xl";
-    if (screenWidth <= 640) size = "sm";
-    else if (screenWidth <= 768) size = "md";
-    else if (screenWidth <= 1024) size = "lg";
-
     return (
         <div className="absolute z-20 top-[37%] left-1/6 max-w-[80%]">
             <h1
@@ -21,7 +14,7 @@ export const HeroTitleButton: FC<HTMLAttributes<HTMLElement>> = () => {
             <div className="my-2 sm:my-4 md:my-6 lg:my-8">
                 <CustomButton
                     intent="secondary"
-                    size={size}
+                    size={useBreakpoint()}
                     roundness={true}
                 >
                     Jetzt starten

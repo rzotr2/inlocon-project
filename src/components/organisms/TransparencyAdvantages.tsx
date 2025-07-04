@@ -12,9 +12,9 @@ export const TransparencyAdvantages: FC<HTMLAttributes<HTMLElement>> = () => {
     const [advantagesRef, advantagesVisible] = useFadeInOnScroll<HTMLDivElement>();
 
     return (
-        <section className="sm:py-10">
+        <section>
             <div
-                className={`${refClass} ${advantagesVisible ? visibleClass : nonVisibleClass}`}
+                className={`${refClass} ${advantagesVisible ? visibleClass : nonVisibleClass} sm:py-10`}
                 ref={advantagesRef}
             >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-stretch py-10">
