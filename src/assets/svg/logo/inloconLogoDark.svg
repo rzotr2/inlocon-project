@@ -1,0 +1,31 @@
+<svg
+        class="w-full h-auto"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="20 20 400 90"
+>
+    <g>
+        <polygon
+                points="60,30 90,47 90,83 60,100 30,83 30,47"
+                stroke="#000"
+                stroke-width="3"
+                fill="none"
+        />
+        <polyline
+                points="30,47 60,64 90,47"
+                stroke="#000"
+                stroke-width="3"
+                fill="none"
+        />
+    </g>
+    <text
+            x="110"
+            y="85"
+            font-family="Montserrat, Arial, sans-serif"
+            font-size="48"
+            fill="#000"
+            letter-spacing="6"
+    >
+        INLOCON
+    </text>
+</svg>
