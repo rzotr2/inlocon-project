@@ -9,6 +9,7 @@ import windImage from "../../../assets/images/branches/wind.webp";
 import doctorImage from "../../../assets/images/branches/doctor.webp";
 import { BranchesCard } from "./BranchesCard.tsx";
 import { EmblaCarousel } from "../EmblaCarousel.tsx";
+import { t } from "i18next";
 
 export const BranchesCardContainer: FC<HTMLAttributes<HTMLElement>> = () => {
     return (
@@ -27,82 +28,82 @@ export const BranchesCardContainer: FC<HTMLAttributes<HTMLElement>> = () => {
             >
                 <BranchesCard
                     src={bauImage}
-                    alt="Bau & Infrastruktur image"
-                    title="BAU & INFRASTRUKTUR"
+                    alt={t("branches.cards.0.alt")}
+                    title={t("branches.cards.0.title")}
                     text={[
-                        "Zugang zu Bauausschreibungen für Hoch- und Tiefbauprojekte",
-                        "Informationen zu geplanten Infrastrukturmaßnahmen",
-                        "Kontakte zu Bauunternehmen",
+                        t("branches.cards.0.text.0"),
+                        t("branches.cards.0.text.1"),
+                        t("branches.cards.0.text.2"),
                     ]}
                 />
                 <BranchesCard
                     src={booksImage}
-                    alt="BILDUNG & FORSCHUNG image"
-                    title="BILDUNG & FORSCHUNG"
+                    alt={t("branches.cards.1.alt")}
+                    title={t("branches.cards.1.title")}
                     text={[
-                        "Ausschreibungen für innovative Bildungs- und Forschungsprojekte",
-                        "Fördermöglichkeiten und Partnerschaften im Wissenschaftsbereich",
-                        "Bedarf an Ausstattung und Services für Bildungseinrichtungen",
+                        t("branches.cards.1.text.0"),
+                        t("branches.cards.1.text.1"),
+                        t("branches.cards.1.text.2"),
                     ]}
                 />
                 <BranchesCard
                     src={itImage}
-                    alt="IT & DIGITALISIERUNG image"
-                    title="IT & DIGITALISIERUNG"
+                    alt={t("branches.cards.2.alt")}
+                    title={t("branches.cards.2.title")}
                     text={[
-                        "IT-Dienstleistungen und Softwarelösungen für Unternehmen",
-                        "Projekte zur digitalen Transformation",
-                        "Ausschreibungen für Hardware, Netzwerke und IT-Sicherheit",
+                        t("branches.cards.2.text.0"),
+                        t("branches.cards.2.text.1"),
+                        t("branches.cards.2.text.2"),
                     ]}
                 />
                 <BranchesCard
                     src={markersImage}
-                    alt="BÜRO & AUSSTATTUNG image"
-                    title="BÜRO & AUSSTATTUNG"
+                    alt={t("branches.cards.3.alt")}
+                    title={t("branches.cards.3.title")}
                     text={[
-                        "Beschaffung von Bürobedarf, Möbeln und Technik",
-                        "Angebote für Arbeitsplatzausstattung und Ergonomie",
-                        "Dienstleistungen für Büroorganisation und Facility Management",
+                        t("branches.cards.3.text.0"),
+                        t("branches.cards.3.text.1"),
+                        t("branches.cards.3.text.2"),
                     ]}
                 />
                 <BranchesCard
                     src={governmentImage}
-                    alt="DIENSTLEISTUNGEN image"
-                    title="DIENSTLEISTUNGEN"
+                    alt={t("branches.cards.4.alt")}
+                    title={t("branches.cards.4.title")}
                     text={[
-                        "Ausschreibungen für Reinigungs-, Wartungs- und Sicherheitsdienste",
-                        "Beratungs- und Managementdienstleistungen",
-                        "Angebote für Event-, Catering- und Logistikservices",
+                        t("branches.cards.4.text.0"),
+                        t("branches.cards.4.text.1"),
+                        t("branches.cards.4.text.2"),
                     ]}
                 />
                 <BranchesCard
                     src={carsImage}
-                    alt="MOBILITÄT & FAHRZEUGE image"
-                    title="MOBILITÄT & FAHRZEUGE"
+                    alt={t("branches.cards.5.alt")}
+                    title={t("branches.cards.5.title")}
                     text={[
-                        "Fuhrparkmanagement und Fahrzeugbeschaffung",
-                        "Leasing- und Mietangebote für PKW, LKW und Spezialfahrzeuge",
-                        "Dienstleistungen rund um Transport",
+                        t("branches.cards.5.text.0"),
+                        t("branches.cards.5.text.1"),
+                        t("branches.cards.5.text.2"),
                     ]}
                 />
                 <BranchesCard
                     src={windImage}
-                    alt="ENERGIE & UMWELT image"
-                    title="ENERGIE & UMWELT"
+                    alt={t("branches.cards.6.alt")}
+                    title={t("branches.cards.6.title")}
                     text={[
-                        "Projekte im Bereich erneuerbare Energien und Energieeffizienz",
-                        "Umweltmanagement und nachhaltige Lösungen",
-                        "Ausschreibungen für Versorgungs- und Entsorgungsleistungen",
+                        t("branches.cards.6.text.0"),
+                        t("branches.cards.6.text.1"),
+                        t("branches.cards.6.text.2"),
                     ]}
                 />
                 <BranchesCard
                     src={doctorImage}
-                    alt="GESUNDHEIT & SOZIALES image"
-                    title="GESUNDHEIT & SOZIALES"
+                    alt={t("branches.cards.7.alt")}
+                    title={t("branches.cards.7.title")}
                     text={[
-                        "Beschaffung von medizinischer Ausstattung und Verbrauchsmaterial",
-                        "Dienstleistungen für Pflege, Betreuung und soziale Einrichtungen",
-                        "Projekte im Bereich Gesundheitsmanagement",
+                        t("branches.cards.7.text.0"),
+                        t("branches.cards.7.text.1"),
+                        t("branches.cards.7.text.2"),
                     ]}
                 />
             </EmblaCarousel>

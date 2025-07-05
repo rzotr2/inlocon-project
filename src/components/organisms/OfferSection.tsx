@@ -3,6 +3,7 @@ import { TitleAndSubtitle } from "../molecules/TitleAndSubtitle.tsx";
 import { OffersCardsContainer } from "../molecules/offers/OffersCardsContainer.tsx";
 import { useFadeInOnScroll } from "../../utils/scrollFadeIn.ts";
 import { nonVisibleClass, refClass, visibleClass } from "../pages/LandingPage.tsx";
+import { t } from "i18next";
 
 export const OfferSection: FC<HTMLAttributes<HTMLElement>> = () => {
     const [offerRef, offerVisible] = useFadeInOnScroll<HTMLDivElement>();
@@ -12,8 +13,8 @@ export const OfferSection: FC<HTMLAttributes<HTMLElement>> = () => {
             <div className="pb-7">
                 <TitleAndSubtitle
                     dark={false}
-                    title="Was bieten wir Ihnen?"
-                    subtitle="Individuelle Auftragschancen, persönliche Beratung und ein starkes Netzwerk – alles aus einer Hand."
+                    title={t("offer.title")}
+                    subtitle={t("offer.subtitle")}
                 />
             </div>
             <div

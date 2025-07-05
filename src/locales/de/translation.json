@@ -1,0 +1,195 @@
+{
+  "header": {
+    "contacts": "Kontakte",
+    "menu": "Menü",
+    "menu_open_aria": "Menü öffnen"
+  },
+  "hero": {
+    "carousel_alt": "Hauptbild für den Hero-Bereich",
+    "title": "Finden Sie passende Ausschreibungen und Verträge – automatisch und individuell.",
+    "start": "Jetzt starten"
+  },
+  "features": {
+    "title": "Effizient zu neuen Aufträgen und Geschäftschancen",
+    "subtitle": "Mit Incolon automatisieren Sie die Suche nach relevanten Ausschreibungen und Verträgen. Nutzen Sie intelligente Filter, detaillierte Analysen und bleiben Sie immer einen Schritt voraus – alles auf einer Plattform.",
+    "cards": [
+      {
+        "title": "Automatische Benachrichtigungen",
+        "subtitle": "Erhalten Sie sofort Updates zu neuen, für Sie relevanten Projekten."
+      },
+      {
+        "title": "Individuelle Filter & Einstellungen",
+        "subtitle": "Sehen Sie nur die Angebote, die wirklich zu Ihnen passen."
+      },
+      {
+        "title": "Analysen & Ergebnisse",
+        "subtitle": "Profitieren Sie von umfassenden Einblicken, Contract Awards und Submission Results."
+      },
+      {
+        "title": "Persönliches Dashboard",
+        "subtitle": "Verwalten Sie Ihre Favoriten, Benachrichtigungen und Einstellungen zentral und übersichtlich."
+      }
+    ]
+  },
+  "branches": {
+    "title": "In diesen Branchen finden Sie passende Ausschreibungen",
+    "subtitle": "Wählen Sie Ihre Interessensgebiete und erhalten Sie aktuelle Ausschreibungen und Verträge aus den wichtigsten Wirtschaftssektoren.",
+    "cards": [
+      {
+        "title": "BAU & INFRASTRUKTUR",
+        "alt": "Bau & Infrastruktur image",
+        "text": [
+          "Zugang zu Bauausschreibungen für Hoch- und Tiefbauprojekte",
+          "Informationen zu geplanten Infrastrukturmaßnahmen",
+          "Kontakte zu Bauunternehmen"
+        ]
+      },
+      {
+        "title": "BILDUNG & FORSCHUNG",
+        "alt": "BILDUNG & FORSCHUNG image",
+        "text": [
+          "Ausschreibungen für innovative Bildungs- und Forschungsprojekte",
+          "Fördermöglichkeiten und Partnerschaften im Wissenschaftsbereich",
+          "Bedarf an Ausstattung und Services für Bildungseinrichtungen"
+        ]
+      },
+      {
+        "title": "IT & DIGITALISIERUNG",
+        "alt": "IT & DIGITALISIERUNG image",
+        "text": [
+          "IT-Dienstleistungen und Softwarelösungen für Unternehmen",
+          "Projekte zur digitalen Transformation",
+          "Ausschreibungen für Hardware, Netzwerke und IT-Sicherheit"
+        ]
+      },
+      {
+        "title": "BÜRO & AUSSTATTUNG",
+        "alt": "BÜRO & AUSSTATTUNG image",
+        "text": [
+          "Beschaffung von Bürobedarf, Möbeln und Technik",
+          "Angebote für Arbeitsplatzausstattung und Ergonomie",
+          "Dienstleistungen für Büroorganisation und Facility Management"
+        ]
+      },
+      {
+        "title": "DIENSTLEISTUNGEN",
+        "alt": "DIENSTLEISTUNGEN image",
+        "text": [
+          "Ausschreibungen für Reinigungs-, Wartungs- und Sicherheitsdienste",
+          "Beratungs- und Managementdienstleistungen",
+          "Angebote für Event-, Catering- und Logistikservices"
+        ]
+      },
+      {
+        "title": "MOBILITÄT & FAHRZEUGE",
+        "alt": "MOBILITÄT & FAHRZEUGE image",
+        "text": [
+          "Fuhrparkmanagement und Fahrzeugbeschaffung",
+          "Leasing- und Mietangebote für PKW, LKW und Spezialfahrzeuge",
+          "Dienstleistungen rund um Transport"
+        ]
+      },
+      {
+        "title": "ENERGIE & UMWELT",
+        "alt": "ENERGIE & UMWELT image",
+        "text": [
+          "Projekte im Bereich erneuerbare Energien und Energieeffizienz",
+          "Umweltmanagement und nachhaltige Lösungen",
+          "Ausschreibungen für Versorgungs- und Entsorgungsleistungen"
+        ]
+      },
+      {
+        "title": "GESUNDHEIT & SOZIALES",
+        "alt": "GESUNDHEIT & SOZIALES image",
+        "text": [
+          "Beschaffung von medizinischer Ausstattung und Verbrauchsmaterial",
+          "Dienstleistungen für Pflege, Betreuung und soziale Einrichtungen",
+          "Projekte im Bereich Gesundheitsmanagement"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "title": "Was bieten wir Ihnen?",
+    "subtitle": "Individuelle Auftragschancen, persönliche Beratung und ein starkes Netzwerk – alles aus einer Hand.",
+    "cards": [
+      {
+        "title": "Individuelle Auftragschancen",
+        "subtitle": "Finden Sie neue Chancen und erhalten Sie passende Angebote für Ihr Unternehmen."
+      },
+      {
+        "title": "Persönliche Beratung",
+        "subtitle": "Nutzen Sie professionelle Beratung für bessere Ergebnisse mit unserer Plattform."
+      },
+      {
+        "title": "Starkes Netzwerk",
+        "subtitle": "Erweitern Sie Ihr Netzwerk gezielt und knüpfen Sie wertvolle Kontakte von Partnern"
+      },
+      {
+        "title": "Effiziente Prozesse",
+        "subtitle": "Automatisierte Workflows und intelligente Matching-Algorithmen für bessere Ergebnisse"
+      }
+    ]
+  },
+  "transparencyA": {
+    "title": "Ihr Vorsprung bei neuen Ausschreibungen und Verträgen",
+    "advantages": [
+      "Individuelle Projektvorschläge direkt in Ihr Dashboard",
+      "Sofortige Benachrichtigungen zu relevanten Chancen",
+      "Detaillierte Auswertungen für fundierte Entscheidungen"
+    ],
+    "start": "Jetzt starten"
+  },
+  "transparencyF": {
+    "title": "Transparenz und Kontrolle über Ihre Ausschreibungen",
+    "features": [
+      "Interaktive Statistiken",
+      "Individuelle Auswertungen",
+      "Historie und Status Ihrer Bewerbungen"
+    ]
+  },
+  "partners": {
+    "title": "Unsere Partner",
+    "subtitle": "Gemeinsam mit starken Partnern schaffen wir Mehrwert und neue Möglichkeiten für unsere Kunden.",
+    "ariaLabel": "Gehen zum {{name}} Webseite",
+    "alt": "{{name}} company logotype"
+  },
+  "feedback": {
+    "cards": [
+      {
+        "text": "Teilen Sie uns Ihre Idee mit",
+        "buttonText": "Idee vorschlagen"
+      },
+      {
+        "text": "Ihr Feedback ist uns wichtig",
+        "buttonText": "Feedback geben"
+      }
+    ]
+  },
+  "questions": {
+    "title": "Wie kann ich starten?",
+    "subtitle": "Erfahren Sie, wie Sie schnell und einfach mit unserer Plattform loslegen können. Hier finden Sie die wichtigsten Schritte für Ihren Einstieg.",
+    "list": [
+      {
+        "question": "Wie registriere ich mich auf der Plattform?",
+        "answer": "Sie können sich einfach mit Ihrer E-Mail-Adresse registrieren und erhalten sofortigen Zugang zu allen Funktionen."
+      },
+      {
+        "question": "Wie richte ich meine Interessen und Filter ein?",
+        "answer": "Im Dashboard können Sie Ihre Interessen und Filter individuell anpassen, um nur relevante Ausschreibungen zu sehen."
+      },
+      {
+        "question": "Wie erhalte ich Benachrichtigungen?",
+        "answer": "Sie erhalten Benachrichtigungen per E-Mail oder direkt im Dashboard, sobald neue passende Projekte verfügbar sind."
+      }
+    ]
+  },
+  "email": {
+    "title": "Geben Sie einfach Ihre E-Mail-Adresse ein",
+    "subtitle": "Unser Team meldet sich schnellstmöglich bei Ihnen und unterstützt Sie gerne bei allen Anliegen.",
+    "button": "Absenden",
+    "placeholder": "E-Mail-Adresse"
+  },
+  "startButton": "Jetzt starten",
+  "about": "Über uns"
+}

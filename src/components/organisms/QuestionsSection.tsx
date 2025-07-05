@@ -5,27 +5,28 @@ import { nonVisibleClass, refClass, visibleClass } from "../pages/LandingPage.ts
 import { Separator } from "@radix-ui/react-separator";
 import { IoChevronDownOutline } from "react-icons/io5";
 import { TitleAndSubtitle } from "../molecules/TitleAndSubtitle.tsx";
-
-const questions = [
-    {
-        question: "Wie registriere ich mich auf der Plattform?",
-        answer: "Sie können sich einfach mit Ihrer E-Mail-Adresse registrieren und erhalten sofortigen Zugang zu allen Funktionen.",
-    },
-    {
-        question: "Wie richte ich meine Interessen und Filter ein?",
-        answer: "Im Dashboard können Sie Ihre Interessen und Filter individuell anpassen, um nur relevante Ausschreibungen zu sehen.",
-    },
-    {
-        question: "Wie erhalte ich Benachrichtigungen?",
-        answer: "Sie erhalten Benachrichtigungen per E-Mail oder direkt im Dashboard, sobald neue passende Projekte verfügbar sind.",
-    },
-];
+import { t } from "i18next";
 
 export const QuestionsSection: FC<HTMLAttributes<HTMLElement>> = () => {
     const [questionsRef, questionsVisible] = useFadeInOnScroll<HTMLDivElement>();
     const [openIdx, setOpenIdx] = useState<number | null>(0);
 
-    const handleClick = (index: number) => {
+    const questions = [
+        {
+            question: t("questions.list.0.question"),
+            answer: t("questions.list.0.answer"),
+        },
+        {
+            question: t("questions.list.1.question"),
+            answer: t("questions.list.1.answer"),
+        },
+        {
+            question: t("questions.list.2.question"),
+            answer: t("questions.list.2.answer"),
+        },
+    ];
+
+    const onButtonClick = (index: number) => {
         if (openIdx === null) {
             setOpenIdx(index);
         } else if (openIdx === index) {
@@ -52,14 +53,13 @@ export const QuestionsSection: FC<HTMLAttributes<HTMLElement>> = () => {
                         aria-hidden
                     />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-0 items-stretch py-5 xl:p-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-4 items-stretch py-5 xl:p-5">
                     <div className="flex justify-start">
                         <TitleAndSubtitle
                             center={false}
                             dark={true}
-                            title="Wie kann ich starten?"
-                            subtitle="Erfahren Sie, wie Sie schnell und einfach mit unserer Plattform loslegen können.
-                        Hier finden Sie die wichtigsten Schritte für Ihren Einstieg."
+                            title={t("questions.title")}
+                            subtitle={t("questions.subtitle")}
                         />
                     </div>
                     <div>
@@ -73,14 +73,11 @@ export const QuestionsSection: FC<HTMLAttributes<HTMLElement>> = () => {
                                     >
                                         <button
                                             className="flex justify-between gap-3 cursor-pointer w-full items-center"
-                                            onClick={() => handleClick(index)}
+                                            onClick={() => onButtonClick(index)}
                                             aria-expanded={isOpen}
                                             aria-controls={`fQuestion №${index}`}
                                         >
-                                            <p
-                                                className="text-accent text-[1rem] sm:text-[1.1rem] font-medium
-                                                    md:text-[1.15rem] lg:text-[1.2rem] leading-snug self-center text-start"
-                                            >
+                                            <p className="text-accent font-medium leading-snug self-center text-start text-[clamp(1rem,2.5vw,1.2rem)]">
                                                 {question.question}
                                             </p>
                                             <div

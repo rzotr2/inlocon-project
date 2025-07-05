@@ -3,9 +3,11 @@ import { TitleAndSubtitle } from "../molecules/TitleAndSubtitle.tsx";
 import { BranchesCardContainer } from "../molecules/branches/BranchesCardContainer.tsx";
 import { useFadeInOnScroll } from "../../utils/scrollFadeIn.ts";
 import { nonVisibleClass, refClass, visibleClass } from "../pages/LandingPage.tsx";
+import { useTranslation } from "react-i18next";
 
 export const BranchesSection: FC<HTMLAttributes<HTMLElement>> = () => {
     const [branchesRef, branchesVisible] = useFadeInOnScroll<HTMLDivElement>();
+    const { t } = useTranslation();
 
     return (
         <section
@@ -15,9 +17,8 @@ export const BranchesSection: FC<HTMLAttributes<HTMLElement>> = () => {
             <div className="pt-5 sm:pt-10 md:pt-15 lg:pt-20 pb-10 w-full h-full">
                 <TitleAndSubtitle
                     id="branches-heading"
-                    title="In diesen Branchen finden Sie passende Ausschreibungen"
-                    subtitle="Wählen Sie Ihre Interessensgebiete und erhalten Sie aktuelle
-                    Ausschreibungen und Verträge aus den wichtigsten Wirtschaftssektoren."
+                    title={t("branches.title")}
+                    subtitle={t("branches.subtitle")}
                 />
             </div>
             <div

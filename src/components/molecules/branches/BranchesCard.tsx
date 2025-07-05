@@ -1,5 +1,6 @@
 import { BsChevronDoubleRight } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useScreenWidth } from "../../../utils/screenWidthHook.ts";
 
 interface BranchCardProps {
     src: string;
@@ -9,7 +10,17 @@ interface BranchCardProps {
 }
 
 export const BranchesCard = ({ src, alt, title, text }: BranchCardProps) => {
+    const screenWidth = useScreenWidth();
+
     const [cardOpened, setCardOpened] = useState(false);
+
+    useEffect(() => {
+        if (screenWidth < 640) {
+            setCardOpened(true);
+        } else {
+            setCardOpened(false);
+        }
+    }, [screenWidth]);
 
     const toggleOpen = () => setCardOpened(!cardOpened);
 
@@ -24,7 +35,6 @@ export const BranchesCard = ({ src, alt, title, text }: BranchCardProps) => {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     src={src}
                     alt={alt}
-                    loading="lazy"
                 />
                 <div
                     className={`absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors 

@@ -1,15 +1,18 @@
 import type { FC, HTMLAttributes } from "react";
 import { CustomButton } from "../../atoms/CustomButton.tsx";
 import { useBreakpoint } from "../../../utils/breakPointHook.ts";
+import { useTranslation } from "react-i18next";
 
 export const HeroTitleButton: FC<HTMLAttributes<HTMLElement>> = () => {
+    const { t } = useTranslation();
+
     return (
-        <div className="absolute z-20 top-[37%] left-1/6 max-w-[80%]">
+        <div className="absolute z-20 top-[37%] left-[10%] sm:left-1/6 max-w-[80%]">
             <h1
-                className="text-primary font-heading font-semibold text-[1.2rem]
-                            sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] block"
+                className="text-primary font-heading font-semibold
+                text-[clamp(1.2rem,4vw,3rem)] block"
             >
-                Finden Sie passende Ausschreibungen und Verträge – automatisch und individuell.
+                {t("hero.title")}
             </h1>
             <div className="my-2 sm:my-4 md:my-6 lg:my-8">
                 <CustomButton
@@ -17,7 +20,7 @@ export const HeroTitleButton: FC<HTMLAttributes<HTMLElement>> = () => {
                     size={useBreakpoint()}
                     roundness={true}
                 >
-                    Jetzt starten
+                    {t("hero.start")}
                 </CustomButton>
             </div>
         </div>

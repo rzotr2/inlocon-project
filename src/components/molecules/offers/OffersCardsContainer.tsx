@@ -1,6 +1,7 @@
 import { type FC, type HTMLAttributes } from "react";
 import { OffersCard } from "./OffersCard.tsx";
 import { EmblaCarousel } from "../EmblaCarousel.tsx";
+import { t } from "i18next";
 
 export const OffersCardsContainer: FC<HTMLAttributes<HTMLElement>> = () => {
     return (
@@ -17,29 +18,29 @@ export const OffersCardsContainer: FC<HTMLAttributes<HTMLElement>> = () => {
                         role="listitem"
                         aria-hidden
                         emoji="🎯"
-                        title="Individuelle Auftragschancen"
-                        subtitle="Finden Sie neue Chancen und erhalten Sie passende Angebote für Ihr Unternehmen"
+                        title={t("offer.cards.0.title")}
+                        subtitle={t("offer.cards.0.subtitle")}
                     />
                     <OffersCard
                         role="listitem"
                         aria-hidden
                         emoji="👥"
-                        title="Persönliche Beratung"
-                        subtitle="Nutzen Sie professionelle Beratung für bessere Ergebnisse mit unserer Plattform"
+                        title={t("offer.cards.1.title")}
+                        subtitle={t("offer.cards.1.subtitle")}
                     />
                     <OffersCard
                         role="listitem"
                         aria-hidden
                         emoji="🌐"
-                        title="Starkes Netzwerk"
-                        subtitle="Erweitern Sie Ihr Netzwerk gezielt und knüpfen Sie wertvolle Kontakte von Partnern"
+                        title={t("offer.cards.2.title")}
+                        subtitle={t("offer.cards.2.subtitle")}
                     />
                     <OffersCard
                         role="listitem"
                         aria-hidden
                         emoji="⚡"
-                        title="Effiziente Prozesse"
-                        subtitle="Automatisierte Workflows und intelligente Matching-Algorithmen für bessere Ergebnisse"
+                        title={t("offer.cards.3.title")}
+                        subtitle={t("offer.cards.3.subtitle")}
                     />
                 </EmblaCarousel>
             </div>
@@ -55,8 +56,8 @@ export const OffersCardsContainer: FC<HTMLAttributes<HTMLElement>> = () => {
                     <OffersCard
                         aria-hidden
                         emoji="🎯"
-                        title="Individuelle Auftragschancen"
-                        subtitle="Finden Sie neue Chancen und erhalten Sie passende Angebote für Ihr Unternehmen."
+                        title={t("offer.cards.0.title")}
+                        subtitle={t("offer.cards.0.subtitle")}
                     />
                 </div>
                 <div
@@ -66,8 +67,8 @@ export const OffersCardsContainer: FC<HTMLAttributes<HTMLElement>> = () => {
                     <OffersCard
                         aria-hidden
                         emoji="👥"
-                        title="Persönliche Beratung"
-                        subtitle="Nutzen Sie professionelle Beratung für bessere Ergebnisse mit unserer Plattform."
+                        title={t("offer.cards.1.title")}
+                        subtitle={t("offer.cards.1.subtitle")}
                     />
                 </div>
                 <div
@@ -77,8 +78,8 @@ export const OffersCardsContainer: FC<HTMLAttributes<HTMLElement>> = () => {
                     <OffersCard
                         aria-hidden
                         emoji="🌐"
-                        title="Starkes Netzwerk"
-                        subtitle="Erweitern Sie Ihr Netzwerk gezielt und knüpfen Sie wertvolle Kontakte von Partnern"
+                        title={t("offer.cards.2.title")}
+                        subtitle={t("offer.cards.2.subtitle")}
                     />
                 </div>
                 <div
@@ -88,8 +89,8 @@ export const OffersCardsContainer: FC<HTMLAttributes<HTMLElement>> = () => {
                     <OffersCard
                         aria-hidden
                         emoji="⚡"
-                        title="Effiziente Prozesse"
-                        subtitle="Automatisierte Workflows und intelligente Matching-Algorithmen für bessere Ergebnisse"
+                        title={t("offer.cards.3.title")}
+                        subtitle={t("offer.cards.3.subtitle")}
                     />
                 </div>
             </div>

@@ -11,6 +11,7 @@ import { Header } from "../organisms/Header.tsx";
 import { Menu } from "../organisms/Menu.tsx";
 import { EmailSection } from "../organisms/EmailSection.tsx";
 import { Footer } from "../organisms/Footer.tsx";
+import { FeedbackSection } from "../organisms/FeedbackSection.tsx";
 
 export const visibleClass = "opacity-100 translate-y-0";
 export const nonVisibleClass = "opacity-0 translate-y-12 pointer-events-none";
@@ -82,12 +83,13 @@ export const LandingPage: FC = () => {
             </div>
             <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px]">
                 <PartnersSection />
+                <FeedbackSection />
                 <QuestionsSection />
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] mb-20">
+            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] mb-8 sm:mb-12 md:mb-15">
                 <EmailSection />
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] bg-accent">
+            <div className="w-full max-w-[1440px] mx-auto px-5 md:px-[60px] lg:px-[100px] xl:px-[120px] bg-accent">
                 <Footer />
             </div>
         </main>

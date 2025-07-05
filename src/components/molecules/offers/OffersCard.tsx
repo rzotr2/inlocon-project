@@ -11,10 +11,10 @@ export const OffersCard: FC<OffersCardProps> = ({ title, subtitle, emoji, ...pro
     return (
         <div
             {...props}
-            className="bg-bg-primary flex flex-col py-5 w-full text-center
-                shadow-xl h-[220px] sm:max-h-[250px] justify-center lg:justify-start"
+            className="bg-bg-primary flex flex-col items-center w-full text-center
+                shadow-xl h-[220px] sm:max-h-[250px] justify-center"
         >
-            <p className="text-6xl">{emoji}</p>
+            <p className="text-5xl">{emoji}</p>
             <div className="px-6 lg:px-3">
                 <Paragraph
                     className="py-2 font-semibold leading-5 px-2"

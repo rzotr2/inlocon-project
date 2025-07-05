@@ -4,8 +4,11 @@ import appsImage from "../../../assets/images/features/apps.jpg";
 import dashboard from "../../../assets/images/features/dashboard.jpg";
 import laptop from "../../../assets/images/features/laptop.jpg";
 import womanComputer from "../../../assets/images/features/woman-computer.jpg";
+import { useTranslation } from "react-i18next";
 
 export const FeaturesCardContainer: FC<HTMLAttributes<HTMLElement>> = () => {
+    const { t } = useTranslation();
+
     return (
         <div
             role="list"
@@ -15,26 +18,26 @@ export const FeaturesCardContainer: FC<HTMLAttributes<HTMLElement>> = () => {
             <FeaturesCard
                 role="listitem"
                 src={appsImage}
-                title="Automatische Benachrichtigungen"
-                subtitle="Erhalten Sie sofort Updates zu neuen, für Sie relevanten Projekten."
+                title={t("features.cards.0.title")}
+                subtitle={t("features.cards.0.subtitle")}
             />
             <FeaturesCard
                 role="listitem"
                 src={womanComputer}
-                title="Individuelle Filter & Einstellungen"
-                subtitle="Sehen Sie nur die Angebote, die wirklich zu Ihnen passen."
+                title={t("features.cards.1.title")}
+                subtitle={t("features.cards.1.subtitle")}
             />
             <FeaturesCard
                 role="listitem"
                 src={laptop}
-                title="Analysen & Ergebnisse"
-                subtitle="Profitieren Sie von umfassenden Einblicken, Contract Awards und Submission Results."
+                title={t("features.cards.2.title")}
+                subtitle={t("features.cards.2.subtitle")}
             />
             <FeaturesCard
                 role="listitem"
                 src={dashboard}
-                title="Persönliches Dashboard"
-                subtitle="Verwalten Sie Ihre Favoriten, Benachrichtigungen und Einstellungen zentral und übersichtlich."
+                title={t("features.cards.3.title")}
+                subtitle={t("features.cards.3.subtitle")}
             />
         </div>
     );

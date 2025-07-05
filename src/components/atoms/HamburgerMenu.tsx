@@ -2,30 +2,32 @@ import * as React from "react";
 import { type FC, type HTMLAttributes, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { VscThreeBars } from "react-icons/vsc";
+import { useTranslation } from "react-i18next";
 
 export const HamburgerMenu: FC<HTMLAttributes<HTMLDivElement>> = ({ onClick, ...props }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { t } = useTranslation();
 
-    const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleOpenMenu = (e: React.MouseEvent<HTMLDivElement>) => {
         setMenuOpen((open) => !open);
         if (onClick) onClick(e);
     };
 
     return (
         <div
-            className="sm:hidden flex gap-1 bg-gray-100 px-1 py-1 rounded-sm items-center cursor-pointer"
+            className="sm:hidden flex gap-1 bg-gray-200 px-4 py-2 rounded-sm items-center cursor-pointer"
             tabIndex={0}
             role="button"
             aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
-            onClick={handleClick}
+            onClick={handleOpenMenu}
             {...props}
         >
-            <p>Menü</p>
+            <p>{t("header.menu")}</p>
             <button
                 className="relative w-6 h-6"
                 aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
                 type="button"
-                tabIndex={-1} // щоб не було дублювання фокусу
+                tabIndex={-1}
             >
                 <RxCross2
                     className={`absolute inset-0 transition-opacity duration-200 cursor-pointer

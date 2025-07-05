@@ -3,6 +3,7 @@ import { Logo } from "../atoms/Logo.tsx";
 import { Paragraph } from "../atoms/Paragraph.tsx";
 import { LanguageSelect } from "../molecules/LanguageSelect.tsx";
 import { HamburgerMenu } from "../atoms/HamburgerMenu.tsx";
+import { useTranslation } from "react-i18next";
 
 interface HeaderProps {
     transparent?: boolean;
@@ -10,6 +11,8 @@ interface HeaderProps {
 }
 
 export const Header: FC<HeaderProps> = ({ transparent = true, openMenu }): ReactNode => {
+    const { t } = useTranslation();
+
     return (
         <nav
             className={`flex items-center justify-between px-2 py-1 ${transparent ? "" : "bg-bg-primary shadow-lg"}
@@ -18,7 +21,7 @@ export const Header: FC<HeaderProps> = ({ transparent = true, openMenu }): React
             <Logo intent={transparent ? "light" : "dark"} />
             <HamburgerMenu
                 onClick={openMenu}
-                aria-label="Menü öffnen"
+                aria-label={t("header.menu_open_aria")}
             />
             <ul className="sm:gap-7 md:gap-9 lg:gap-10 items-center hidden sm:flex">
                 <li>
@@ -29,20 +32,20 @@ export const Header: FC<HeaderProps> = ({ transparent = true, openMenu }): React
                         <Paragraph
                             intent={transparent ? "primary" : "secondary"}
                             size="lg"
-                            className={`${transparent ? "hover:border-primary" : "hover:border-accent"} border-b-1 pb-0.5 border-transparent`}
+                            className={`${transparent ? "hover:border-primary" : "hover:border-accent"} border-b-1 border-transparent`}
                         >
-                            Kontakte
+                            {t("header.contacts")}
                         </Paragraph>
                     </a>
                 </li>
                 <li>
-                    <a href="tel:+49341253479111">
+                    <a href="#">
                         <Paragraph
                             intent={transparent ? "primary" : "secondary"}
                             size="lg"
-                            className={`${transparent ? "hover:border-primary" : "hover:border-accent"} border-b-1 pb-0.5 border-transparent`}
+                            className={`${transparent ? "hover:border-primary" : "hover:border-accent"} border-b-1 border-transparent`}
                         >
-                            +49-341-253-479-111
+                            {t("about")}
                         </Paragraph>
                     </a>
                 </li>

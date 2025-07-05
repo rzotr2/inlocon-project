@@ -1,6 +1,7 @@
 import { type RefObject, useEffect, useRef, useState } from "react";
 
 export function useFadeInOnScroll<T extends HTMLElement = HTMLDivElement>(
+    // div height to start fade in
     threshold = 0.2,
 ): [RefObject<T | null>, boolean] {
     const ref = useRef<T | null>(null);

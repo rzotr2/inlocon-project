@@ -5,6 +5,7 @@ import { useFadeInOnScroll } from "../../utils/scrollFadeIn.ts";
 import { Input } from "../atoms/Input.tsx";
 import { CustomButton } from "../atoms/CustomButton.tsx";
 import { useBreakpoint } from "../../utils/breakPointHook.ts";
+import { t } from "i18next";
 
 export const EmailSection: FC = () => {
     const [emailRef, emailVisible] = useFadeInOnScroll<HTMLDivElement>();
@@ -19,10 +20,9 @@ export const EmailSection: FC = () => {
                 >
                     <div className="pb-10 px-4">
                         <TitleAndSubtitle
-                            className=""
                             dark={false}
-                            title="Geben Sie einfach Ihre E-Mail-Adresse ein"
-                            subtitle="Unser Team meldet sich schnellstmöglich bei Ihnen und unterstützt Sie gerne bei allen Anliegen."
+                            title={t("email.title")}
+                            subtitle={t("email.subtitle")}
                         />
                     </div>
                     <div className="flex justify-center gap-3">
@@ -35,7 +35,7 @@ export const EmailSection: FC = () => {
                             size={breakpointHook}
                             roundness={true}
                         >
-                            Absenden
+                            {t("email.button")}
                         </CustomButton>
                     </div>
                 </div>

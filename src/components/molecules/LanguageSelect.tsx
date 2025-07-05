@@ -2,6 +2,7 @@ import * as Select from "@radix-ui/react-select";
 import { FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
 import { TiTick } from "react-icons/ti";
+import { useTranslation } from "react-i18next";
 
 interface LanguageSelectProps {
     variant?: "light" | "dark";
@@ -13,7 +14,8 @@ const options = [
 ];
 
 export const LanguageSelect = ({ variant = "light" }: LanguageSelectProps) => {
-    const [value, setValue] = useState("de");
+    const [value, setValue] = useState(localStorage.getItem("currentLanguage") || undefined);
+    const { i18n } = useTranslation();
 
     const contentClass = "bg-primary text-accent";
 
@@ -24,11 +26,16 @@ export const LanguageSelect = ({ variant = "light" }: LanguageSelectProps) => {
 
     return (
         <Select.Root
-            value={value}
-            onValueChange={setValue}
+            value={value || "de"}
+            onValueChange={(value) => {
+                setValue(value);
+                i18n.changeLanguage(value).then(() => {
+                    localStorage.setItem("currentLanguage", value);
+                });
+            }}
         >
             <Select.Trigger
-                className={`flex gap-3 items-center justify-between px-3 py-2 text-lg
+                className={`flex gap-3 items-center justify-between py-2 text-lg
                                 outline-none transition-all duration-200 cursor-pointer group
                                 ${variant === "dark" ? "text-primary" : "text-accent"}`}
                 aria-label="Sprache wählen"

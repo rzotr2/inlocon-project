@@ -1,0 +1,195 @@
+{
+  "header": {
+    "contacts": "Contacts",
+    "menu": "Menu",
+    "menu_open_aria": "Open menu"
+  },
+  "hero": {
+    "carousel_alt": "Main image for the hero section",
+    "title": "Find suitable tenders and contracts – automatically and individually.",
+    "start": "Get started now"
+  },
+  "features": {
+    "title": "Efficiently to new contracts and business opportunities",
+    "subtitle": "With Incolon, you automate the search for relevant tenders and contracts. Use intelligent filters, detailed analyses, and always stay one step ahead – all on one platform.",
+    "cards": [
+      {
+        "title": "Automatic notifications",
+        "subtitle": "Receive instant updates on new projects relevant to you."
+      },
+      {
+        "title": "Individual filters & settings",
+        "subtitle": "See only the offers that really suit you."
+      },
+      {
+        "title": "Analyses & results",
+        "subtitle": "Benefit from comprehensive insights, contract awards, and submission results."
+      },
+      {
+        "title": "Personal dashboard",
+        "subtitle": "Manage your favorites, notifications, and settings centrally and clearly."
+      }
+    ]
+  },
+  "branches": {
+    "title": "In these industries you will find suitable tenders",
+    "subtitle": "Select your areas of interest and receive current tenders and contracts from the most important economic sectors.",
+    "cards": [
+      {
+        "title": "CONSTRUCTION & INFRASTRUCTURE",
+        "alt": "Construction & Infrastructure image",
+        "text": [
+          "Access to construction tenders for building and civil engineering projects",
+          "Information on planned infrastructure measures",
+          "Contacts to construction companies"
+        ]
+      },
+      {
+        "title": "EDUCATION & RESEARCH",
+        "alt": "Education & Research image",
+        "text": [
+          "Tenders for innovative education and research projects",
+          "Funding opportunities and partnerships in the science sector",
+          "Demand for equipment and services for educational institutions"
+        ]
+      },
+      {
+        "title": "IT & DIGITALIZATION",
+        "alt": "IT & Digitalization image",
+        "text": [
+          "IT services and software solutions for companies",
+          "Projects for digital transformation",
+          "Tenders for hardware, networks, and IT security"
+        ]
+      },
+      {
+        "title": "OFFICE & EQUIPMENT",
+        "alt": "Office & Equipment image",
+        "text": [
+          "Procurement of office supplies, furniture, and technology",
+          "Offers for workplace equipment and ergonomics",
+          "Services for office organization and facility management"
+        ]
+      },
+      {
+        "title": "SERVICES",
+        "alt": "Services image",
+        "text": [
+          "Tenders for cleaning, maintenance, and security services",
+          "Consulting and management services",
+          "Offers for event, catering, and logistics services"
+        ]
+      },
+      {
+        "title": "MOBILITY & VEHICLES",
+        "alt": "Mobility & Vehicles image",
+        "text": [
+          "Fleet management and vehicle procurement",
+          "Leasing and rental offers for cars, trucks, and special vehicles",
+          "Services related to transport"
+        ]
+      },
+      {
+        "title": "ENERGY & ENVIRONMENT",
+        "alt": "Energy & Environment image",
+        "text": [
+          "Projects in the field of renewable energies and energy efficiency",
+          "Environmental management and sustainable solutions",
+          "Tenders for supply and disposal services"
+        ]
+      },
+      {
+        "title": "HEALTH & SOCIAL",
+        "alt": "Health & Social image",
+        "text": [
+          "Procurement of medical equipment and consumables",
+          "Services for care, support, and social institutions",
+          "Projects in the field of health management"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "title": "What do we offer you?",
+    "subtitle": "Individual contract opportunities, personal consulting, and a strong network – all from a single source.",
+    "cards": [
+      {
+        "title": "Individual contract opportunities",
+        "subtitle": "Find new opportunities and receive suitable offers for your company."
+      },
+      {
+        "title": "Personal consulting",
+        "subtitle": "Use professional consulting for better results with our platform."
+      },
+      {
+        "title": "Strong network",
+        "subtitle": "Expand your network in a targeted manner and make valuable contacts with partners."
+      },
+      {
+        "title": "Efficient processes",
+        "subtitle": "Automated workflows and intelligent matching algorithms for better results"
+      }
+    ]
+  },
+  "transparencyA": {
+    "title": "Your advantage with new tenders and contracts",
+    "advantages": [
+      "Individual project suggestions directly in your dashboard",
+      "Instant notifications about relevant opportunities",
+      "Detailed analyses for well-founded decisions"
+    ],
+    "start": "Get started now"
+  },
+  "transparencyF": {
+    "title": "Transparency and control over your tenders",
+    "features": [
+      "Interactive statistics",
+      "Individual analyses",
+      "History and status of your applications"
+    ]
+  },
+  "partners": {
+    "title": "Our partners",
+    "subtitle": "Together with strong partners, we create added value and new opportunities for our customers.",
+    "ariaLabel": "Go to {{name}} website",
+    "alt": "{{name}} company logotype"
+  },
+  "feedback": {
+    "cards": [
+      {
+        "text": "Share your idea with us",
+        "buttonText": "Suggest idea"
+      },
+      {
+        "text": "Your feedback is important to us",
+        "buttonText": "Give feedback"
+      }
+    ]
+  },
+  "questions": {
+    "title": "How can I get started?",
+    "subtitle": "Find out how you can quickly and easily get started with our platform. Here you will find the most important steps for your introduction.",
+    "list": [
+      {
+        "question": "How do I register on the platform?",
+        "answer": "You can simply register with your email address and get immediate access to all features."
+      },
+      {
+        "question": "How do I set up my interests and filters?",
+        "answer": "In the dashboard, you can individually adjust your interests and filters to see only relevant tenders."
+      },
+      {
+        "question": "How do I receive notifications?",
+        "answer": "You will receive notifications by email or directly in the dashboard as soon as new suitable projects are available."
+      }
+    ]
+  },
+  "email": {
+    "title": "Simply enter your email address",
+    "subtitle": "Our team will get back to you as soon as possible and will be happy to assist you with any concerns.",
+    "button": "Send",
+    "placeholder": "Email address"
+  },
+  "startButton": "Get started now",
+  "about": "About"
+}

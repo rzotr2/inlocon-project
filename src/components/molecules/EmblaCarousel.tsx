@@ -11,7 +11,7 @@ interface EmblaCarouselProps {
     fade?: boolean;
     fullWidth?: boolean;
     buttons?: boolean;
-    variant?: "features" | "offers" | "branches";
+    variant?: "features" | "offers" | "branches" | "feedback";
 }
 
 export const EmblaCarousel = ({
@@ -70,7 +70,7 @@ export const EmblaCarousel = ({
 
     return (
         <div className="w-full h-full">
-            <div className={variant === "branches" ? "rounded-xl overflow-hidden" : ""}>
+            <div className={variant === "branches" ? "rounded-sm overflow-hidden" : ""}>
                 <div
                     className="overflow-hidden w-full h-full"
                     ref={emblaRef}
@@ -131,10 +131,12 @@ export const EmblaCarousel = ({
             </div>
             {buttons && (
                 <div className="flex justify-center my-4 items-center gap-3">
-                    <CarouselPrevButton
-                        onClick={onPrevButtonClick}
-                        ria-label="Vorherige Branche"
-                    />
+                    {variant !== "feedback" && (
+                        <CarouselPrevButton
+                            onClick={onPrevButtonClick}
+                            ria-label="Vorherige Branche"
+                        />
+                    )}
                     {scrollSnaps.map((_, idx) => (
                         <button
                             onClick={() => emblaApi && emblaApi.scrollTo(idx)}
@@ -144,10 +146,12 @@ export const EmblaCarousel = ({
                             aria-label={`Zum Slide №${idx} gehen`}
                         />
                     ))}
-                    <CarouselNextButton
-                        onClick={onNextButtonClick}
-                        aria-label="Nächste Branche"
-                    />
+                    {variant !== "feedback" && (
+                        <CarouselNextButton
+                            onClick={onNextButtonClick}
+                            aria-label="Nächste Branche"
+                        />
+                    )}
                 </div>
             )}
         </div>
