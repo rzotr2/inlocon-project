@@ -31,7 +31,7 @@ export const Footer: FC = () => {
                     </li>
                 </ul>
                 <ul className="space-y-4 sm:space-y-2">
-                    <li>
+                    <li className="text-center">
                         <a
                             href="tel:+49341253479111"
                             className="text-primary text-[1rem] sm:text-[1.1rem]
@@ -40,7 +40,7 @@ export const Footer: FC = () => {
                             +49 341 253 479 111
                         </a>
                     </li>
-                    <li>
+                    <li className="text-center">
                         <a
                             href="tel:+49341253479222"
                             className="text-primary text-[1rem] sm:text-[1.1rem]
@@ -49,7 +49,7 @@ export const Footer: FC = () => {
                             +49 341 253 479 222
                         </a>
                     </li>
-                    <li>
+                    <li className="text-center">
                         <a
                             href="mailto:email@example.com"
                             className="text-primary text-[1rem] sm:text-[1.1rem]
