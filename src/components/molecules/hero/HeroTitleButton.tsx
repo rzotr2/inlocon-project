@@ -7,10 +7,10 @@ export const HeroTitleButton: FC<HTMLAttributes<HTMLElement>> = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="absolute z-20 top-[37%] left-[10%] sm:left-1/6 max-w-[80%]">
+        <div className="absolute z-20 top-[45%] left-[10%] sm:left-1/6 max-w-[80%]">
             <h1
                 className="text-primary font-heading font-semibold
-                text-[clamp(1.2rem,4vw,3rem)] block"
+                    text-[clamp(1.2rem,4vw,3rem)] block"
             >
                 {t("hero.title")}
             </h1>

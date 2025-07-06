@@ -16,7 +16,7 @@ const tailwindConfig = {
             },
             colors: {
                 bgPrimary: "#F9FAFB",
-                primary: "#FFFFFF",
+                primary: "#F9FAFB",
                 primaryHover: "#F3F4F6",
                 secondary: "#6BDBA0",
                 secondaryHover: "#56b87f",
@@ -31,6 +31,8 @@ const tailwindConfig = {
                 fadeIn: "fadeIn 0.3s ease",
                 ticker: "ticker 30s linear infinite",
                 "ticker-half": "ticker-half 10s linear infinite",
+                "slide-in": "slide-in 0.4s cubic-bezier(.16,1,.3,1)",
+                "slide-out": "slide-out 0.3s cubic-bezier(.16,1,.3,1)",
             },
             keyframes: {
                 fadeIn: {
@@ -44,6 +46,14 @@ const tailwindConfig = {
                 "ticker-half": {
                     "0%": { transform: "translateX(0)" },
                     "100%": { transform: "translateX(-50%)" },
+                },
+                "slide-in": {
+                    "0%": { opacity: "0", transform: "translateX(100%)" },
+                    "100%": { opacity: "1", transform: "translateX(0)" },
+                },
+                "slide-out": {
+                    "0%": { opacity: "1", transform: "translateX(0)" },
+                    "100%": { opacity: "0", transform: "translateX(100%)" },
                 },
             },
         },

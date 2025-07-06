@@ -68,29 +68,35 @@ export const LandingPage: FC = () => {
             <div ref={heroRef}>
                 <HeroSection />
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px]">
+            <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] bg-bg-primary">
                 <FeaturesSection />
                 <BranchesSection />
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] bg-accent">
-                <OfferSection />
+            <div className="bg-accent">
+                <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px]">
+                    <OfferSection />
+                </div>
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px]">
+            <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] bg-bg-primary">
                 <TransparencyAdvantages />
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] bg-accent">
-                <TransparencyFeatures />
+            <div className="bg-accent">
+                <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px]">
+                    <TransparencyFeatures />
+                </div>
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px]">
+            <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] bg-bg-primary">
                 <PartnersSection />
                 <FeedbackSection />
                 <QuestionsSection />
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] mb-8 sm:mb-12 md:mb-15">
+            <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] mb-8 sm:mb-12 md:mb-15 bg-bg-primary">
                 <EmailSection />
             </div>
-            <div className="w-full max-w-[1440px] mx-auto px-5 md:px-[60px] lg:px-[100px] xl:px-[120px] bg-accent">
-                <Footer />
+            <div className="bg-accent">
+                <div className="w-full max-w-[1920px] mx-auto px-5 md:px-[60px] lg:px-[100px] xl:px-[120px]">
+                    <Footer />
+                </div>
             </div>
         </main>
     );

@@ -36,8 +36,8 @@ export const LanguageSelect = ({ variant = "light" }: LanguageSelectProps) => {
         >
             <Select.Trigger
                 className={`flex gap-3 items-center justify-between py-2 text-lg
-                                outline-none transition-all duration-200 cursor-pointer group
-                                ${variant === "dark" ? "text-primary" : "text-accent"}`}
+                    outline-none transition-all duration-200 cursor-pointer group
+                    ${variant === "dark" ? "text-primary" : "text-accent"}`}
                 aria-label="Sprache wählen"
             >
                 <Select.Value />
@@ -47,6 +47,7 @@ export const LanguageSelect = ({ variant = "light" }: LanguageSelectProps) => {
             </Select.Trigger>
             <Select.Content
                 hideWhenDetached={true}
+                align="center"
                 className={`rounded-xl shadow-lg ${contentClass} animate-fade-in`}
                 position="popper"
             >

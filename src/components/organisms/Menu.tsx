@@ -13,7 +13,7 @@ export const Menu: FC<MenuProps> = ({ menuOpened }) => {
     return (
         <aside
             className={`fixed left-0 top-[64px] w-screen h-[calc(100vh-64px)] bg-bg-primary z-40 sm:hidden overflow-hidden
-            transition-all duration-300 ${menuOpened ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
+                transition-all duration-300 ${menuOpened ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
         >
             <div className="w-full h-full flex justify-center items-center ">
                 <ul className="flex flex-col gap-3 items-center">
@@ -29,16 +29,14 @@ export const Menu: FC<MenuProps> = ({ menuOpened }) => {
                         </a>
                     </li>
                     <li>
-                        <a href="tel:+49341253479111">
-                            <a href="#">
-                                <Paragraph
-                                    intent="secondary"
-                                    size="lg"
-                                    className="hover:border-accent border-b-1 border-transparent"
-                                >
-                                    {t("about")}
-                                </Paragraph>
-                            </a>
+                        <a href="#">
+                            <Paragraph
+                                intent="secondary"
+                                size="lg"
+                                className="hover:border-accent border-b-1 border-transparent"
+                            >
+                                {t("about")}
+                            </Paragraph>
                         </a>
                     </li>
                     <li>

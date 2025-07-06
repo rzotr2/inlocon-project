@@ -26,7 +26,7 @@ export const BranchesCard = ({ src, alt, title, text }: BranchCardProps) => {
 
     return (
         <div
-            className="shadow-sm overflow-hidden group bg-white transition-all duration-300 h-full"
+            className="shadow-sm overflow-hidden group bg-bg-primary transition-all duration-300 h-full"
             role="listitem"
             onClick={toggleOpen}
         >

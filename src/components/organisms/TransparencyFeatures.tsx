@@ -26,13 +26,13 @@ export const TransparencyFeatures: FC<HTMLAttributes<HTMLElement>> = () => {
     ];
 
     return (
-        <section className="py-7 sm:py-10 md:py-12">
+        <section className="py-7 sm:py-10 md:py-12 flex justify-center">
             <div
                 className={`${refClass} ${featuresVisible ? visibleClass : nonVisibleClass}`}
                 ref={featuresRef}
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-3 items-center">
-                    <div className="flex order-2 sm:order-1 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-3 place-items-end items-center">
+                    <div className="flex order-2 sm:order-1">
                         <div className="flex flex-col justify-center w-full px-2">
                             <h3
                                 className="text-primary font-bold text-left text-[1.4rem]
@@ -57,8 +57,8 @@ export const TransparencyFeatures: FC<HTMLAttributes<HTMLElement>> = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="flex order-1 sm:order-2">
-                        <div className="aspect-square w-full max-w-[480px] rounded-2xl overflow-hidden mx-auto">
+                    <div className="flex order-1 sm:order-2 flex-0">
+                        <div className="aspect-square max-w-[480px] rounded-2xl overflow-hidden">
                             <img
                                 className="w-full object-cover rounded-2xl"
                                 src={consultImage}

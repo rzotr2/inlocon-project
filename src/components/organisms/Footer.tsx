@@ -32,28 +32,31 @@ export const Footer: FC = () => {
                 </ul>
                 <ul className="space-y-4 sm:space-y-2">
                     <li>
-                        <p
+                        <a
+                            href="tel:+49341253479111"
                             className="text-primary text-[1rem] sm:text-[1.1rem]
                                 md:text-[1.15rem] lg:text-[1.2rem] leading-snug self-center text-center sm:text-start"
                         >
                             +49 341 253 479 111
-                        </p>
+                        </a>
                     </li>
                     <li>
-                        <p
+                        <a
+                            href="tel:+49341253479222"
                             className="text-primary text-[1rem] sm:text-[1.1rem]
                                 md:text-[1.15rem] lg:text-[1.2rem] leading-snug self-center text-center sm:text-start"
                         >
                             +49 341 253 479 222
-                        </p>
+                        </a>
                     </li>
                     <li>
-                        <p
+                        <a
+                            href="mailto:email@example.com"
                             className="text-primary text-[1rem] sm:text-[1.1rem]
                                 md:text-[1.15rem] lg:text-[1.2rem] leading-snug self-center text-center sm:text-start"
                         >
                             email@example.com
-                        </p>
+                        </a>
                     </li>
                     <li>
                         <Socials />
