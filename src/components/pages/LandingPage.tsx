@@ -21,20 +21,21 @@ export const LandingPage: FC = () => {
     const [menuOpened, setMenuOpened] = useState(false);
     const heroRef = useRef<HTMLDivElement | null>(null);
     const [transparent, setTransparent] = useState(true);
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (!heroRef.current) {
                 setTransparent(true);
-                return;
+            } else {
+                const rect = heroRef.current.getBoundingClientRect();
+                const heroQuarter = rect.top + rect.height / 4;
+                setTransparent(heroQuarter > 0);
             }
-            const rect = heroRef.current.getBoundingClientRect();
-            const heroQuarter = rect.top + rect.height / 4;
-            setTransparent(heroQuarter > 0);
+            setVisible(window.scrollY > window.innerHeight);
         };
 
         setTimeout(handleScroll, 0);
-
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -54,6 +55,15 @@ export const LandingPage: FC = () => {
 
     return (
         <main>
+            <a
+                href="#hero"
+                aria-label="Back to top"
+                className={`fixed z-50 bottom-5 right-5 h-10 w-10 bg-secondary text-accent flex items-center
+                    justify-center rounded-full shadow-lg hover:bg-secondary-hover transition-opacity duration-300
+                    ${visible && !menuOpened ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+            >
+                ↑
+            </a>
             <div
                 role="rowheader"
                 className="sticky top-0 z-50"
@@ -65,7 +75,10 @@ export const LandingPage: FC = () => {
                 />
             </div>
             {<Menu menuOpened={menuOpened} />}
-            <div ref={heroRef}>
+            <div
+                ref={heroRef}
+                id="hero"
+            >
                 <HeroSection />
             </div>
             <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-[60px] lg:px-[100px] xl:px-[120px] bg-bg-primary">
